@@ -1,9 +1,11 @@
 <template>
-  <div class="row">
+  <div>
     <h2>User Information</h2>
     <hr>
-    <app-servers></app-servers>
-    <app-server-detail></app-server-detail>
+    <div class="row">
+      <app-servers></app-servers>
+      <app-server-detail></app-server-detail>
+    </div>
   </div>
 </template>
 
