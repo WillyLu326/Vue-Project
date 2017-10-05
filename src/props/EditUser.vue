@@ -10,6 +10,15 @@
       </div>
     </div>
 
+    <div class="row form-group">
+      <div class="col-sm-3">
+        <label for="age">Age: </label>
+      </div>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="age" v-model="age">
+      </div>
+    </div>
+
     <button class="btn btn-success">Update Name</button>
   </div>
 </template>
