@@ -19,12 +19,19 @@
           </div>
       </div>
 
-      <button class="btn btn-warning">Create Into Edit</button>
+      <button class="btn btn-warning">Create Into Edit(Route to Parent)</button>
   </div>
 </template>
 
 <script>
-    
+    export default {
+        data () {
+            return {
+                name: '',
+                age: ''
+            }
+        }
+    }
 </script>
 
 <style scoped>
