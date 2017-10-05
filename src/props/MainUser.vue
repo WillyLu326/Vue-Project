@@ -11,16 +11,20 @@
             @updateName="updateNameHandler($event)"
             @updateAge="updateAgeHandler($event)">
       </app-edit-user>
+
+      <app-add-user></app-add-user>
     </div>
   </div>
 </template>
 
 <script>
   import EditUser from './EditUser.vue'
+  import AddUser from './AddUser.vue'
 
   export default {
     components: {
-      'app-edit-user': EditUser
+      'app-edit-user': EditUser,
+      'app-add-user': AddUser
     },
     data () {
       return {
