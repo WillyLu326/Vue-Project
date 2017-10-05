@@ -6,7 +6,7 @@
         <label for="name">Name: </label>
       </div>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="name" v-model="nameValue">
+        <input type="text" class="form-control" name="name" v-model="name">
       </div>
     </div>
 
@@ -15,7 +15,7 @@
         <label for="age">Age: </label>
       </div>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="age" v-model="ageValue">
+        <input type="text" class="form-control" name="age" v-model="age">
       </div>
     </div>
 
@@ -29,16 +29,10 @@
       name: String,
       age: Number
     },
-    data () {
-      return {
-        nameValue: this.name,
-        ageValue: this.age
-      }
-    },
     methods: {
       updateNameAndAge () {
-        this.$emit('updateName', this.nameValue)
-        this.$emit('updateAge', this.ageValue)
+        this.$emit('updateName', this.name)
+        this.$emit('updateAge', this.age)
       }
     }
   }

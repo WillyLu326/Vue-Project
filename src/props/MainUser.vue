@@ -12,7 +12,10 @@
             @updateAge="updateAgeHandler($event)">
       </app-edit-user>
 
-      <app-add-user></app-add-user>
+      <app-add-user 
+            @addName="addNameHandler($event)"
+            @addAge="addAgeHandler($event)">
+      </app-add-user>
     </div>
   </div>
 </template>
@@ -38,6 +41,12 @@
       },
       updateAgeHandler (updatedAge) {
         this.age = Number(updatedAge)
+      },
+      addNameHandler (addedName) {
+        this.name = addedName
+      },
+      addAgeHandler (addedAge) {
+        this.age = addedAge
       }
     }
   }
