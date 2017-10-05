@@ -7,7 +7,7 @@
         <div>Age: {{ age }}</div>
       </div>
 
-      <app-edit-user></app-edit-user>
+      <app-edit-user :name="name" :age="age"></app-edit-user>
     </div>
   </div>
 </template>
