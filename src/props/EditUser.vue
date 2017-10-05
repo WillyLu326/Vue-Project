@@ -6,7 +6,7 @@
         <label for="name">Name: </label>
       </div>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="name" v-model="name">
+        <input type="text" class="form-control" name="name" v-model="nameValue">
       </div>
     </div>
 
@@ -15,7 +15,7 @@
         <label for="age">Age: </label>
       </div>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="age" v-model="age">
+        <input type="text" class="form-control" name="age" v-model="ageValue">
       </div>
     </div>
 
@@ -28,6 +28,12 @@
     props: {
       name: String,
       age: Number
+    },
+    data () {
+      return {
+        nameValue: this.name,
+        ageValue: this.age
+      }
     }
   }
 </script>
