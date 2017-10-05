@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container cmp">
     <div class="row">
       <div class="col-xs-12 col-sm-12">
         <h1>Main User Section</h1>
@@ -28,4 +28,10 @@
   }
 </script>
 
+<style scoped>
+  .cmp {
+    border: 1px solid rebeccapurple;
+    background-color: greenyellow;
+  }
+</style>
 

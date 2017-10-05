@@ -12,7 +12,8 @@
 <style scoped>
     .cmp {
         border: 1px solid pink;
-        padding: 10px 5px;
+        padding: 10px;
+        background: orangered;
     }
 </style>
 
