@@ -7,7 +7,10 @@
         <div>Age: {{ age }}</div>
       </div>
 
-      <app-edit-user :name="name" :age="age"></app-edit-user>
+      <app-edit-user :name="name" :age="age" 
+            @updateName="updateNameHandler($event)"
+            @updateAge="updateAgeHandler($event)">
+      </app-edit-user>
     </div>
   </div>
 </template>
@@ -23,6 +26,14 @@
       return {
         name: 'Willy Lu',
         age: 28
+      }
+    },
+    methods: {
+      updateNameHandler (updatedName) {
+        this.name = updatedName
+      },
+      updateAgeHandler (updatedAge) {
+        this.age = Number(updatedAge)
       }
     }
   }

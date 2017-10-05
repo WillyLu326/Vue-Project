@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <button class="btn btn-success">Update Name</button>
+    <button class="btn btn-success" @click="updateNameAndAge">Update</button>
   </div>
 </template>
 
@@ -33,6 +33,12 @@
       return {
         nameValue: this.name,
         ageValue: this.age
+      }
+    },
+    methods: {
+      updateNameAndAge () {
+        this.$emit('updateName', this.nameValue)
+        this.$emit('updateAge', this.ageValue)
       }
     }
   }
