@@ -15,6 +15,16 @@
   export default {
     components: {
       'app-server': Server
+    },
+    data () {
+      return {
+        servers: [
+          { data: 0, status: 'Normal' },
+          { data: 1, status: 'Critical' },
+          { data: 2, status: 'Unknown' },
+          { data: 3, status: 'Normal' }
+        ]
+      }
     }
   }
 </script>
