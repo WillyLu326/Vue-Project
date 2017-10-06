@@ -31,7 +31,7 @@
     methods: {
       goToServerDetail (server, index) {
         this.selectedIndex = index
-        this.EventBus.$emit('sever-status', {
+        EventBus.$emit('sever-status', {
           status: server.status,
           index: index
         })
