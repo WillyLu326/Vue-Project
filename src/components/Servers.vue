@@ -11,6 +11,7 @@
 
 <script>
   import Server from './Server.vue'
+  import { EventBus } from './../main.js'
 
   export default {
     components: {
@@ -30,6 +31,10 @@
     methods: {
       goToServerDetail (server, index) {
         this.selectedIndex = index
+        this.EventBus.$emit('sever-status', {
+          status: server.status,
+          index: index
+        })
       }
     }
   }
