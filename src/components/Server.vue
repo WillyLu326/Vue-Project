@@ -1,16 +1,22 @@
 <template>
   <li class="list-group-item">
-
+    Server #{{ server.status }}
   </li>
 </template>
 
 <script>
-    
+  export default {
+    props: {
+      server: Object,
+      index: Number,
+      selectedIndex: Number
+    }
+  }
 </script>
 
 <style scoped>
-    li {
-        cursor: pointer;
-    }
+li {
+  cursor: pointer;
+}
 </style>
 
