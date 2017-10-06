@@ -1,5 +1,5 @@
 <template>
-  <li class="list-group-item">
+  <li class="list-group-item" :class="{ active: index === selectedIndex }">
     Server #{{ server.status }}
   </li>
 </template>
