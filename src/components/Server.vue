@@ -15,8 +15,8 @@
 </script>
 
 <style scoped>
-li {
-  cursor: pointer;
-}
+  li {
+    cursor: pointer;
+  }
 </style>
 

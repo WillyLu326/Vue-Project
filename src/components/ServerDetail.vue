@@ -3,3 +3,7 @@
       <h4>Server Details</h4>
   </div>
 </template>
+
+<script>
+  
+</script>
