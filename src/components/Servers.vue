@@ -36,6 +36,11 @@
           index: index
         })
       }
+    },
+    created () {
+      EventBus.$on('status-updated', obj => {
+        this.servers[obj.index].status = obj.status
+      })
     }
   }
 </script>

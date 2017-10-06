@@ -4,7 +4,7 @@
       <div v-else>
         <h4>Status: {{ status }}</h4>
         <hr>
-        <button class="btn btn-success">Update</button>
+        <button class="btn btn-success" @click="updateStatus()">Update</button>
       </div>
   </div>
 </template>
@@ -24,6 +24,15 @@
         this.status = obj.status
         this.index = obj.index
       })
+    },
+    methods: {
+      updateStatus () {
+        this.status = 'Normal'
+        EventBus.$emit('status-updated', {
+          status: this.status,
+          index: this.index
+        })
+      }
     }
   }
 </script>
