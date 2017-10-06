@@ -19,7 +19,7 @@
         index: -1
       }
     },
-    create () {
+    created () {
       EventBus.$on('server-status', obj => {
         this.status = obj.status
         this.index = obj.index

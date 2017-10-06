@@ -1,7 +1,7 @@
 <template>
   <div class="col-xs-12 col-sm-6">
     <ul class="list-group">
-      <app-server v-for="(server, index) in servers" v-bind:key="server"
+      <app-server v-for="(server, index) in servers" v-bind:key="server.data"
                 :server="server" :index="index" :selectedIndex="selectedIndex"
                 @click.native="goToServerDetail(server, index)">
       </app-server>
@@ -31,7 +31,7 @@
     methods: {
       goToServerDetail (server, index) {
         this.selectedIndex = index
-        EventBus.$emit('sever-status', {
+        EventBus.$emit('server-status', {
           status: server.status,
           index: index
         })

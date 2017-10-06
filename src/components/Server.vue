@@ -1,6 +1,6 @@
 <template>
   <li class="list-group-item" :class="{ active: index === selectedIndex }">
-    Server #{{ server.status }}
+    Server #{{ server.data }}
   </li>
 </template>
 
