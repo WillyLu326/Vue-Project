@@ -4,7 +4,10 @@
       <!-- <li class="list-group-item" v-bind:key="server" v-for="server in 5">
         Server # {{ server }}
       </li> -->
-      <app-server></app-server>
+      <app-server v-for="(server, index) in servers" v-bind:key="server"
+                :server="server" :index="index" :selectedIndex="selectedIndex"
+                @click.native="goToServerDetail(server, index)">
+      </app-server>
     </ul>
   </div>
 </template>
@@ -23,7 +26,13 @@
           { data: 1, status: 'Critical' },
           { data: 2, status: 'Unknown' },
           { data: 3, status: 'Normal' }
-        ]
+        ],
+        selectedIndex: -1
+      }
+    },
+    methods: {
+      goToServerDetail (server, index) {
+        this.selectedIndex = index
       }
     }
   }
