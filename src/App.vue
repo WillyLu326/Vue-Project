@@ -4,7 +4,12 @@
     <hr>
     <app-main-user></app-main-user>
     <hr>
-
+    <app-parent>
+      <div>
+        <h3>This is content 1</h3>
+        <h4>This is content 2</h4>
+      </div>
+    </app-parent>
   </div>
 </template>
 
