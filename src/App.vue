@@ -8,6 +8,7 @@
       <div>
         <h3>This is content 1</h3>
         <h4>This is content 2</h4>
+        <h4>This is content 3</h4>
       </div>
     </app-parent>
   </div>
