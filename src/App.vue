@@ -12,6 +12,8 @@
         <h4>This is content 4</h4>
       </div>
     </app-parent>
+    <hr>
+    <app-quotes></app-quotes>
   </div>
 </template>
 
@@ -19,12 +21,14 @@
   import User from './components/User.vue'
   import MainUser from './props/MainUser.vue'
   import Parent from './slot/Parent.vue'
+  import Quotes from './quotes/Quotes.vue'
 
   export default {
     components: {
       'app-user': User,
       'app-main-user': MainUser,
-      'app-parent': Parent
+      'app-parent': Parent,
+      appQuotes: Quotes
     }
   }
 </script>
