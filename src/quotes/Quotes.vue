@@ -34,6 +34,9 @@
     },
     methods: {
       addQuoteHandler (quote) {
+        if (this.quotes.length >= this.maxQuotes) {
+          return alert('Plz delete some quotes')
+        }
         this.quotes.push(quote)
       }
     }
