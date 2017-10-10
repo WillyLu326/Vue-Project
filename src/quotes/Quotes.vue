@@ -3,7 +3,7 @@
     <app-header @addQuote="addQuoteHandler"></app-header>
     <app-progress :curtQuotes="quotes.length" :maxQuotes="maxQuotes"></app-progress>
     <br>
-    <app-quote-grid :quotes="quotes" :maxQuotes="maxQuotes"></app-quote-grid>
+    <app-quote-grid :quotes="quotes" :maxQuotes="maxQuotes" @deleteQuote="deleteQuoteHandler"></app-quote-grid>
     <br>
     <div class="row">
       <div class="col-sm-12">
@@ -38,6 +38,9 @@
           return alert('Plz delete some quotes')
         }
         this.quotes.push(quote)
+      },
+      deleteQuoteHandler (index) {
+        this.quotes.splice(index, 1)
       }
     }
   }
