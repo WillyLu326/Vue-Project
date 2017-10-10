@@ -14,6 +14,8 @@
     </app-parent>
     <hr>
     <app-quotes></app-quotes>
+    <hr>
+    <app-forms></app-forms>
   </div>
 </template>
 
@@ -22,13 +24,15 @@
   import MainUser from './props/MainUser.vue'
   import Parent from './slot/Parent.vue'
   import Quotes from './quotes/Quotes.vue'
+  import Forms from './forms/Forms.vue'
 
   export default {
     components: {
       'app-user': User,
       'app-main-user': MainUser,
       'app-parent': Parent,
-      appQuotes: Quotes
+      appQuotes: Quotes,
+      appForms: Forms
     }
   }
 </script>
