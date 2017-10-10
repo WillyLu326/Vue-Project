@@ -1,15 +1,18 @@
 <template>
   <div>
+    <app-header></app-header>
     <app-quote-grid :quotes="quotes" :maxQuotes="maxQuotes"></app-quote-grid>
   </div>
 </template>
 
 <script>
   import QuoteGrid from './QuoteGrid.vue'
+  import Header from './Header.vue'
 
   export default {
     components: {
-      appQuoteGrid: QuoteGrid
+      appQuoteGrid: QuoteGrid,
+      appHeader: Header
     },
     data () {
       return {
