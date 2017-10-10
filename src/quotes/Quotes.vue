@@ -17,6 +17,7 @@
   import QuoteGrid from './QuoteGrid.vue'
   import Header from './Header.vue'
   import Progress from './Progress.vue'
+  import { EventBus } from './../main.js'
 
   export default {
     components: {
@@ -34,6 +35,7 @@
     },
     methods: {
       addQuoteHandler (quote) {
+        EventBus.$emit('clearQuote', '')
         if (this.quotes.length >= this.maxQuotes) {
           return alert('Plz delete some quotes')
         }

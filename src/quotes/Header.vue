@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import { EventBus } from './../main.js'
+
   export default {
     data () {
       return {
@@ -26,6 +28,11 @@
       addQuote () {
         this.$emit('addQuote', this.newQuote)
       }
+    },
+    created () {
+      EventBus.$on('clearQuote', () => {
+        this.newQuote = ''
+      })
     }
   }
 </script>
