@@ -24,7 +24,7 @@
     },
     methods: {
       addQuoteHandler (quote) {
-        this.quotes.push(quote);
+        this.quotes.push(quote)
       }
     }
   }
