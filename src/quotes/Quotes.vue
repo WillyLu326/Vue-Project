@@ -4,6 +4,12 @@
     <app-progress :curtQuotes="quotes.length" :maxQuotes="maxQuotes"></app-progress>
     <br>
     <app-quote-grid :quotes="quotes" :maxQuotes="maxQuotes"></app-quote-grid>
+    <br>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="alert alert-info text-center">Info: Click to delete it</div>
+      </div>
+    </div>
   </div>
 </template>
 
