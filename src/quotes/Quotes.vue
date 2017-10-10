@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header @addQuote="addQuoteHandler"></app-header>
     <app-quote-grid :quotes="quotes" :maxQuotes="maxQuotes"></app-quote-grid>
   </div>
 </template>
@@ -20,6 +20,11 @@
           'Sample Quote'
         ],
         maxQuotes: 10
+      }
+    },
+    methods: {
+      addQuoteHandler (quote) {
+        this.quotes.push(quote);
       }
     }
   }
