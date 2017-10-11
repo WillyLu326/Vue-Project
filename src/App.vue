@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <router-view></router-view>
     <app-user></app-user>
     <hr>
     <app-main-user></app-main-user>
