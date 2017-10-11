@@ -28,6 +28,7 @@
   import Parent from './slot/Parent.vue'
   import Quotes from './quotes/Quotes.vue'
   import Forms from './forms/Forms.vue'
+  
 
   export default {
     components: {
