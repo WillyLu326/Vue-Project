@@ -2,6 +2,7 @@
   <div class="container">
     <h1>Router</h1>
     <hr>
+    <app-header></app-header>
     <router-view></router-view>
     <app-user></app-user>
     <hr>
@@ -28,7 +29,7 @@
   import Parent from './slot/Parent.vue'
   import Quotes from './quotes/Quotes.vue'
   import Forms from './forms/Forms.vue'
-  
+  import Header from './routers/Header.vue'
 
   export default {
     components: {
@@ -36,7 +37,8 @@
       'app-main-user': MainUser,
       'app-parent': Parent,
       appQuotes: Quotes,
-      appForms: Forms
+      appForms: Forms,
+      appHeader: Header
     }
   }
 </script>
